@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="YOUR NAME">
+<title>YOUR NAME</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+  /* ===== Korean-IG × academic minimal ===== */
+  :root{
+    --bg:#faf7f2;          /* warm cream */
+    --card:#ffffff;
+    --text:#2c2622;        /* soft near-black */
+    --muted:#8c8177;       /* warm taupe */
+    --accent:#a8927e;      /* dusty mocha */
+    --accent-soft:#efe7dd; /* latte */
+    --sage:#9aa78f;        /* muted sage accent */
+    --rule:#ece5da;
+    --maxw:760px;
+    --shadow:0 10px 30px rgba(120,100,80,.08);
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+  body{
+    margin:0;
+    font-family:'Noto Sans KR',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+    color:var(--text);
+    line-height:1.75;
+    font-size:16px;
+    font-weight:400;
+    background:var(--bg);
+    background-image:radial-gradient(circle at 15% 0%,#f4ece1 0,rgba(244,236,225,0) 45%),
+                     radial-gradient(circle at 100% 100%,#f0eee9 0,rgba(240,238,233,0) 40%);
+  }
+  a{color:var(--accent);text-decoration:none;transition:color .2s}
+  a:hover{color:var(--text)}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:30px 22px 90px}
+
+  /* serif display font for headings */
+  h1,h2,.serif{font-family:'Fraunces',Georgia,serif}
+
+  nav{
+    position:sticky;top:0;z-index:10;
+    text-align:center;padding:14px 0;margin:-30px -22px 34px;
+    background:rgba(250,247,242,.82);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--rule);
+    font-size:13px;letter-spacing:.14em;text-transform:uppercase;
+  }
+  nav a{margin:0 12px;color:var(--muted);font-weight:500}
+  nav a:hover{color:var(--accent)}
+
+  /* ===== Header ===== */
+  header{
+    background:var(--card);border-radius:24px;box-shadow:var(--shadow);
+    padding:34px 34px 30px;
+    display:flex;gap:30px;align-items:center;flex-wrap:wrap;
+    border:1px solid var(--rule);
+  }
+  header .photo{flex:0 0 168px;position:relative}
+  header .photo img{
+    width:168px;height:168px;object-fit:cover;border-radius:50%;
+    padding:6px;background:var(--bg);
+    box-shadow:0 0 0 1px var(--rule), 0 8px 22px rgba(120,100,80,.14);
+  }
+  header .intro{flex:1;min-width:250px}
+  header h1{font-size:33px;margin:0 0 2px;font-weight:600;letter-spacing:-.01em}
+  header .han{font-size:15px;color:var(--muted);font-weight:400;letter-spacing:.02em}
+  header .affil{color:var(--muted);margin:8px 0 14px;font-size:14.5px}
+  header p.bio{margin:0 0 16px;font-size:15px;color:#4a423b}
+  .links a{
+    display:inline-block;margin:0 8px 8px 0;padding:6px 15px;
+    font-size:13px;font-weight:500;letter-spacing:.02em;
+    border-radius:999px;background:var(--accent-soft);color:#6f6154;
+  }
+  .links a:hover{background:var(--accent);color:#fff}
+
+  .tags{margin:22px 2px 0;text-align:center}
+  .tag{
+    display:inline-block;margin:0 5px 8px;font-size:12.5px;font-weight:500;
+    letter-spacing:.05em;color:var(--sage);
+  }
+  .tag::before{content:"◦ ";color:var(--accent)}
+
+  /* ===== Sections ===== */
+  section{margin-top:44px}
+  h2{
+    font-size:23px;font-weight:500;margin:0 0 20px;letter-spacing:.01em;
+    display:flex;align-items:center;gap:12px;color:var(--text);
+  }
+  h2::after{content:"";flex:1;height:1px;background:var(--rule)}
+  h2 .kr{font-family:'Noto Sans KR';font-size:12px;color:var(--muted);
+    font-weight:400;letter-spacing:.1em;text-transform:uppercase}
+
+  /* card rows */
+  .item,.row{
+    background:var(--card);border:1px solid var(--rule);border-radius:18px;
+    box-shadow:var(--shadow);padding:20px 22px;margin-bottom:16px;
+    transition:transform .18s ease, box-shadow .18s ease;
+  }
+  .item:hover,.row:hover{transform:translateY(-2px);
+    box-shadow:0 14px 34px rgba(120,100,80,.13)}
+
+  .item{display:flex;gap:20px;align-items:flex-start}
+  .item .thumb{flex:0 0 148px}
+  .item .thumb img{width:148px;border-radius:12px;border:1px solid var(--rule)}
+  .item .body{flex:1;min-width:200px}
+  .item .title{font-weight:700;font-size:16px;color:var(--text)}
+  .item .authors{color:var(--muted);font-size:14px}
+  .item .authors b{color:var(--accent)}
+  .item .venue{font-family:'Fraunces';font-style:italic;color:var(--sage);font-size:14.5px}
+  .item .meta{margin-top:6px}
+  .item .meta a{font-weight:500;font-size:13px;margin-right:14px;
+    border-bottom:1px solid var(--accent-soft)}
+
+  .row{display:flex;gap:18px;align-items:baseline}
+  .row .date{flex:0 0 140px;color:var(--accent);font-size:13px;font-weight:500;
+    font-family:'Fraunces'}
+  .row .desc{flex:1;font-size:15px}
+  .row .desc b{font-weight:700}
+
+  footer{
+    margin-top:64px;padding-top:20px;border-top:1px solid var(--rule);
+    color:var(--muted);font-size:12.5px;text-align:center;letter-spacing:.03em
+  }
+  footer a{color:var(--accent)}
+
+  @media(max-width:600px){
+    header{justify-content:center;text-align:center;padding:28px 22px}
+    .row{flex-direction:column;gap:2px}
+    .row .date{flex-basis:auto}
+    .item{flex-direction:column}
+    .item .thumb{flex-basis:auto}
+    .item .thumb img{width:100%}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#education">Education</a>
+    <a href="#projects">Projects</a>
+    <a href="#honors">Honors</a>
+  </nav>
+
+  <!-- ============ HEADER ============ -->
+  <header id="about">
+    <div class="photo">
+      <img src="images/profile.jpg" alt="YOUR NAME"
+           onerror="this.src='https://via.placeholder.com/168/efe7dd/a8927e?text=Photo'">
+    </div>
+    <div class="intro">
+      <h1>Bo-Hao Chen <span class="han">陳柏澔</span></h1>
+      <p class="affil">Undergraduate Student · Department of Sociology, Soochow University</p>
+      <p class="bio">
+        I am an undergraduate student at
+        <a href="https://www.scu.edu.tw/">Soochow University</a>, majoring in
+        Sociology with a minor in Data Science and a Micro-Program in Artificial
+        Intelligence and Business Applications. My research centers on
+        <b>natural language processing (NLP) for Chinese and Korean</b>.
+        Coming from a sociology background, I am fascinated by how language
+        encodes social meaning, and I see NLP as a way to model the identity,
+        discourse, and cultural nuance embedded in text. I am especially drawn to
+        <b>cross-lingual and low-resource settings</b>, since Chinese and Korean
+        pose distinct challenges for English-centric models — an interest that is
+        as much a genuine love of both languages as it is a research direction.
+      </p>
+      <div class="links">
+        <a href="mailto:10112050@gm.scu.edu.tw">Email</a>
+        <a href="data/CV.pdf">CV</a>
+        <a href="https://www.linkedin.com/in/bo-hao-chen-99b6793a9/">LinkedIn</a>
+        <a href="https://github.com/EscA95103040126">GitHub</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="tags">
+    <span class="tag">Chinese &amp; Korean NLP</span>
+    <span class="tag">Computational Social Science</span>
+    <span class="tag">Low-Resource &amp; Cross-Lingual NLP</span>
+  </div>
+
+  <!-- ============ EDUCATION ============ -->
+  <section id="education">
+    <h2>Education</h2>
+    <div class="row">
+      <div class="date">Sep. 2024 – 2028 (expected)</div>
+      <div class="desc">
+        <b>B.A. in Sociology</b>, Soochow University, Taipei, Taiwan<br>
+        Minor in Data Science · Micro-Program in Artificial Intelligence and Business Applications<br>
+        <b>B.S. in Interdisciplinary Studies</b> — Computational Social Science and Intelligent Applications<br>
+        GPA: 3.78 / 4.30
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROJECTS ============ -->
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="item">
+      <div class="thumb">
+        <img src="images/linebot.png" alt="K-pop Pocket LINE chatbot"
+             onerror="this.src='https://via.placeholder.com/148x100/efe7dd/9aa78f?text=K-pop+Pocket'">
+      </div>
+      <div class="body">
+        <div class="title">K-pop Pocket — a K-pop Companion Chatbot on LINE</div>
+        <div class="venue">First Place · 2026 Soochow University LINE Chatbot Design Competition</div>
+        <p style="margin:6px 0 0;font-size:14.5px;color:#4a423b">
+          A LINE chatbot that turns a single natural-language message into five features —
+          artist analysis, weekly charts, interactive quizzes, daily recommendations, and a
+          personal collection. A Gemini-powered router dispatches each query, while a Korean
+          NLP model (KcELECTRA) performs aspect-based sentiment analysis on fan opinion, backed
+          by Bugs-chart and Naver News crawlers and SQLite / Supabase storage for personalized
+          recommendations. Built with the LINE Messaging API. Team project (5 members).
+          <a href="https://github.com/EscA95103040126/K-popPocket_LineBot">Code</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ HONORS ============ -->
+  <section id="honors">
+    <h2>Honors &amp; Awards</h2>
+    <div class="row">
+      <div class="date">2026</div>
+      <div class="desc">First Place · 2026 Soochow University LINE Chatbot Design Competition, Department of Data Science, Soochow University</div>
+    </div>
+    <div class="row">
+      <div class="date">2026</div>
+      <div class="desc">Outstanding Student Scholarship (114-2 Semester), Soochow University</div>
+    </div>
+    <div class="row">
+      <div class="date">2026</div>
+      <div class="desc">Qin-Fang Scholarship for Academic Excellence (114-1 Semester), Department of Sociology, Soochow University</div>
+    </div>
+    <div class="row">
+      <div class="date">2025</div>
+      <div class="desc">Outstanding Student Scholarship (114-1 Semester), Soochow University</div>
+    </div>
+    <div class="row">
+      <div class="date">2025</div>
+      <div class="desc">Outstanding Student Scholarship (113-2 Semester), Soochow University</div>
+    </div>
+    <div class="row">
+      <div class="date">2024</div>
+      <div class="desc">Outstanding Student Scholarship (113-1 Semester), Soochow University</div>
+    </div>
+    <div class="row">
+      <div class="date">2024</div>
+      <div class="desc">Outstanding Student Scholarship (112-2 Semester), Soochow University</div>
+    </div>
+  </section>
+
+  <footer>
+    Last updated July 2026 · &copy; 2026 YOUR NAME<br>
+    Design inspired by <a href="https://jonbarron.info">Jon Barron's website</a>.
+  </footer>
+
+</div>
+</body>
+</html>
