@@ -94,6 +94,11 @@
   h2::after{content:"";flex:1;height:1px;background:var(--rule)}
   h2 .kr{font-family:'Noto Sans KR';font-size:12px;color:var(--muted);
     font-weight:400;letter-spacing:.1em;text-transform:uppercase}
+  .row .date .school-logo{
+    width:92px;height:92px;object-fit:contain;flex:0 0 92px;
+    border-radius:50%;background:var(--card);border:1px solid var(--rule);
+    padding:4px;margin-top:8px;
+  }
 
   /* card rows */
   .item,.row{
@@ -118,7 +123,7 @@
 
   .row{display:flex;gap:18px;align-items:baseline}
   .row .date{flex:0 0 140px;color:var(--accent);font-size:13px;font-weight:500;
-    font-family:'Fraunces'}
+    font-family:'Fraunces';display:flex;flex-direction:column;align-items:center;text-align:center}
   .row .desc{flex:1;font-size:15px}
   .row .desc b{font-weight:700}
 
@@ -135,6 +140,7 @@
     .item{flex-direction:column}
     .item .thumb{flex-basis:auto}
     .item .thumb img{width:100%}
+    .row .date .school-logo{width:80px;height:80px;flex-basis:80px}
   }
 </style>
 </head>
@@ -189,7 +195,10 @@
   <section id="education">
     <h2>Education</h2>
     <div class="row">
-      <div class="date">Sep. 2024 – 2028 (expected)</div>
+      <div class="date">
+        Sep. 2024 – 2028 (expected)
+        <img class="school-logo" src="images/sculogo.jpg" alt="Soochow University logo">
+      </div>
       <div class="desc">
         <b>B.A. in Sociology</b>, Soochow University, Taipei, Taiwan<br>
         Minor in Data Science · Micro-Program in Artificial Intelligence and Business Applications<br>
