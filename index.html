@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="author" content="YOUR NAME">
-<title>YOUR NAME</title>
+<meta name="author" content="Bo-Hao Chen">
+<title>Bo-Hao Chen</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -126,6 +126,8 @@
     font-family:'Fraunces';display:flex;flex-direction:column;align-items:center;text-align:center}
   .row .desc{flex:1;font-size:15px}
   .row .desc b{font-weight:700}
+  .row .desc .terms{margin:8px 0 0;padding-left:18px;font-size:13px;color:var(--muted)}
+  .row .desc .terms li{margin-top:2px}
 
   footer{
     margin-top:64px;padding-top:20px;border-top:1px solid var(--rule);
@@ -166,8 +168,7 @@
       <p class="bio">
         I am an undergraduate student at
         <a href="https://www.scu.edu.tw/">Soochow University</a>, majoring in
-        Sociology with a minor in Data Science and a Micro-Program in Artificial
-        Intelligence and Business Applications. My research centers on
+        Sociology with a minor in Data Science. My research centers on
         <b>natural language processing (NLP) for Chinese and Korean</b>.
         Coming from a sociology background, I am fascinated by how language
         encodes social meaning, and I see NLP as a way to model the identity,
@@ -201,7 +202,7 @@
       </div>
       <div class="desc">
         <b>B.A. in Sociology</b>, Soochow University, Taipei, Taiwan<br>
-        Minor in Data Science · Micro-Program in Artificial Intelligence and Business Applications<br>
+        Minor in Data Science<br>
         <b>B.S. in Interdisciplinary Studies</b> — Computational Social Science and Intelligent Applications<br>
         GPA: 3.78 / 4.30
       </div>
@@ -219,14 +220,21 @@
       <div class="body">
         <div class="title">K-pop Pocket — a K-pop Companion Chatbot on LINE</div>
         <div class="venue">First Place · 2026 Soochow University LINE Chatbot Design Competition</div>
+        <div class="venue">Poster · 2026 Taiwan Interdisciplinary Bachelor's Forum (Ministry of Education), National Cheng Kung University, Oct 2026 — selected by Soochow University as its sole presenter</div>
         <p style="margin:6px 0 0;font-size:14.5px;color:#4a423b">
-          A LINE chatbot that turns a single natural-language message into five features —
-          artist analysis, weekly charts, interactive quizzes, daily recommendations, and a
-          personal collection. A Gemini-powered router dispatches each query, while a Korean
-          NLP model (KcELECTRA) performs aspect-based sentiment analysis on fan opinion, backed
-          by Bugs-chart and Naver News crawlers and SQLite / Supabase storage for personalized
-          recommendations. Built with the LINE Messaging API. Team project (5 members).
-          <a href="https://github.com/EscA95103040126/K-popPocket_LineBot">Code</a>
+          A LINE chatbot, deployed on Hugging Face Spaces, that turns K-pop chart, news, and
+          fan-comment data into artist reports, weekly charts, quizzes, daily picks, and a
+          personal collection. Artist reports combine Bugs charts and Naver News with five-aspect
+          sentiment analysis of Korean YouTube comments (KcELECTRA / Gemini), precomputed offline.
+          Its recommender matches fans' free-text preferences to members with BAAI/bge-m3,
+          LoRA-fine-tuned on 2,267 synthetic fan queries, raising member hit@3 on 238 real fan
+          requests from 19% (keyword baseline) to 28%; Gemini then writes reasons grounded in
+          sourced member traits. Rule-based routing over the LINE Messaging API, with SQLite /
+          Supabase storage and CI tests. Began as a 5-member course project in which I was the
+          sole developer and designer (teammates produced the final report video); I built
+          v2–v5 of the recommender independently after the competition.
+          <a href="https://github.com/EscA95103040126/K-popPocket_LineBot">Code</a> ·
+          <a href="https://youtu.be/K1o_IkwICHw">Demo video</a>
         </p>
       </div>
     </div>
@@ -236,32 +244,30 @@
   <section id="honors">
     <h2>Honors &amp; Awards</h2>
     <div class="row">
+      <div class="date">2024–2026</div>
+      <div class="desc">
+        Academic Excellence Award, 5 consecutive semesters (Spring 2024 – Spring 2026), Soochow University
+        — awarded to the top 3 students in class each semester
+        <ul class="terms">
+          <li>Spring 2024 · Dept. of History · dept. 1/44 (top 2.3%) · avg. 93.15/100</li>
+          <li>Fall 2024 · class 2/56, dept. 2/109 (top 1.8%) · avg. 94.00/100</li>
+          <li>Spring 2025 · class 2/54, dept. 2/110 (top 1.8%) · avg. 94.31/100</li>
+          <li>Fall 2025 · class 1/52, dept. 1/105 (top 1.0%) · avg. 94.96/100</li>
+          <li>Spring 2026 · class 3/54, dept. 8/106 (top 7.6%) · avg. 91.46/100</li>
+        </ul>
+      </div>
+    </div>
+    <div class="row">
       <div class="date">2026</div>
       <div class="desc">First Place · 2026 Soochow University LINE Chatbot Design Competition, Department of Data Science, Soochow University</div>
     </div>
     <div class="row">
       <div class="date">2026</div>
-      <div class="desc">Outstanding Student Scholarship (114-2 Semester), Soochow University</div>
+      <div class="desc">Ministry of Education Scholarship for Outstanding Economically Disadvantaged Students (2025–26 Academic Year), Taiwan</div>
     </div>
     <div class="row">
       <div class="date">2026</div>
-      <div class="desc">Qin-Fang Scholarship for Academic Excellence (114-1 Semester), Department of Sociology, Soochow University</div>
-    </div>
-    <div class="row">
-      <div class="date">2025</div>
-      <div class="desc">Outstanding Student Scholarship (114-1 Semester), Soochow University</div>
-    </div>
-    <div class="row">
-      <div class="date">2025</div>
-      <div class="desc">Outstanding Student Scholarship (113-2 Semester), Soochow University</div>
-    </div>
-    <div class="row">
-      <div class="date">2024</div>
-      <div class="desc">Outstanding Student Scholarship (113-1 Semester), Soochow University</div>
-    </div>
-    <div class="row">
-      <div class="date">2024</div>
-      <div class="desc">Outstanding Student Scholarship (112-2 Semester), Soochow University</div>
+      <div class="desc">Qin-Fang Scholarship for Academic Excellence (Fall 2025), Department of Sociology, Soochow University</div>
     </div>
   </section>
 
