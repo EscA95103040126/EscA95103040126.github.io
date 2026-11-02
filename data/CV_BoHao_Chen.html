@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>CV — Bo-Hao Chen</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/aaaakshat/cm-web-fonts@latest/fonts.css">
+<style>
+  @page{size:Letter;margin:15mm 16mm}
+  *{box-sizing:border-box}
+  body{margin:0;color:#000;background:#fff;
+       font-family:'Computer Modern Serif','Latin Modern Roman','CMU Serif',Georgia,serif;
+       font-size:10pt;line-height:1.3}
+  .name{font-size:15pt;font-weight:bold;margin:0}
+  .contact{font-size:9.5pt;margin-top:1px}
+  .contact a{color:#000;text-decoration:none}
+  h2{font-variant:small-caps;font-weight:normal;font-size:11.5pt;letter-spacing:.2px;
+     margin:13px 0 7px;padding-bottom:2px;border-bottom:.8px solid #000}
+  .entry{margin:0 0 7px 0;break-inside:avoid}
+  .line{display:flex;justify-content:space-between;gap:16px}
+  .line .r{white-space:nowrap;text-align:right;padding-right:2px}
+  .head{font-weight:bold}
+  .head::before{content:"\2022";font-weight:normal;margin-right:6px}
+  .sub{padding-left:12px}
+  .it{font-style:italic}
+  ul{margin:1px 0 0 12px;padding-left:16px;list-style:circle}
+  li{margin:0}
+  p{margin:0}
+  a.link{color:#1a3ee8;text-decoration:none;font-weight:bold}
+  .note{text-align:right;font-size:9pt;margin-top:-2px}
+</style>
+</head>
+<body>
+
+<p class="name">Bo-Hao Chen</p>
+<div class="contact">
+  Email : <a href="mailto:10112050@gm.scu.edu.tw">10112050@gm.scu.edu.tw</a> &nbsp;|&nbsp;
+  Website : <a href="https://esca95103040126.github.io">esca95103040126.github.io</a> &nbsp;|&nbsp;
+  GitHub : <a href="https://github.com/EscA95103040126">github.com/EscA95103040126</a>
+</div>
+
+<h2>Research Interest</h2>
+<p>My research centers on <b>natural language processing for Chinese and Korean</b>. Coming from a sociology
+background, I aim to model the identity, discourse, and cultural nuance embedded in text. I am especially
+interested in <b>cross-lingual and low-resource NLP</b>, since Chinese and Korean pose distinct challenges for
+English-centric models.</p>
+
+<h2>Education</h2>
+<div class="entry">
+  <div class="line"><span class="head">Soochow University</span><span class="r">Taipei, Taiwan</span></div>
+  <div class="line sub"><span class="it">B.A. in Sociology with a Minor in Data Science (Cumulative GPA: 3.78/4.30)</span><span class="r it">Sep. 2024 – Jun. 2028 (expected)</span></div>
+  <ul>
+    <li>B.S. in Interdisciplinary Studies — Computational Social Science and Intelligent Applications</li>
+    <li>Transferred from the Department of History (Sep. 2021 – Jun. 2024, including a one-year leave of absence); GPA includes History coursework</li>
+  </ul>
+</div>
+
+<h2>Teaching Experience</h2>
+<div class="entry">
+  <div class="line"><span class="head">Teaching and Learning Resources Center, Soochow University</span><span class="r">Taipei, Taiwan</span></div>
+  <div class="line sub"><span class="it">Teaching Assistant, Korean (1) (Instructor: Yun Jeong Yang)</span><span class="r it">Sep. 2026 – Present</span></div>
+  <ul>
+    <li>Assist in-class instruction for an introductory Korean language course and support students during class</li>
+    <li>Compile and verify students' participation credits and record them in the course grade book</li>
+    <li>Prepare hands-on teaching materials and handle pre-class logistics</li>
+  </ul>
+</div>
+
+<h2>Projects</h2>
+<div class="entry">
+  <div class="line"><span class="head">K-pop Pocket: A K-pop Companion Chatbot on LINE<sup>∗</sup>
+    <a class="link" href="https://github.com/EscA95103040126/K-popPocket_LineBot">[Code]</a>
+    <a class="link" href="https://youtu.be/K1o_IkwICHw">[Demo]</a></span><span class="r it">2026 – Present</span></div>
+  <div class="sub">LINE chatbot that turns K-pop charts, news, and Korean fan comments into artist reports and recommendations</div>
+  <ul>
+    <li>Fine-tuned BAAI/bge-m3 with LoRA on 2,267 synthetic fan queries (generated with Qwen3-4B) for preference-based
+      member recommendation, raising member hit@3 on 238 real fan requests from 19% (keyword baseline) to 28%</li>
+    <li>Added Gemini preference parsing and recommendation reasons grounded in sourced member traits</li>
+    <li>Built an offline pipeline for five-aspect sentiment analysis of Korean YouTube comments (KcELECTRA / Gemini)</li>
+    <li>Deployed on Hugging Face Spaces with Docker, SQLite / Supabase storage, and CI tests</li>
+  </ul>
+</div>
+<p class="note"><sup>∗</sup> Began as a 5-member course project in which I was the sole developer and designer; v2–v5 of the recommender developed independently.</p>
+
+<h2>Presentations</h2>
+<div class="entry">
+  <div class="line"><span class="head">2026 Taiwan Interdisciplinary Bachelor's Forum (Ministry of Education)</span><span class="r">Tainan, Taiwan</span></div>
+  <div class="line sub"><span>Poster: K-pop Pocket — selected by Soochow University as its sole presenter</span><span class="r it">Oct. 2026</span></div>
+</div>
+
+<h2>Honors and Awards</h2>
+<div class="entry">
+  <div class="line"><span class="head">Academic Excellence Award, Soochow University</span><span class="r it">Spring 2024 – Spring 2026</span></div>
+  <div class="sub">Five consecutive semesters; awarded to the top 3 students in class each semester</div>
+  <ul>
+    <li>Spring 2024 · Dept. of History · dept. 1/44 (top 2.3%) · avg. 93.15/100</li>
+    <li>Fall 2024 · class 2/56, dept. 2/109 (top 1.8%) · avg. 94.00/100</li>
+    <li>Spring 2025 · class 2/54, dept. 2/110 (top 1.8%) · avg. 94.31/100</li>
+    <li>Fall 2025 · class 1/52, dept. 1/105 (top 1.0%) · avg. 94.96/100</li>
+    <li>Spring 2026 · class 3/54, dept. 8/106 (top 7.6%) · avg. 91.46/100</li>
+  </ul>
+</div>
+<div class="entry">
+  <div class="line"><span class="head">First Place, 2026 Soochow University LINE Chatbot Design Competition</span><span class="r it">2026</span></div>
+  <div class="sub">Department of Data Science, Soochow University</div>
+</div>
+<div class="entry">
+  <div class="line"><span class="head">Ministry of Education Scholarship for Outstanding Economically Disadvantaged Students</span><span class="r it">2025–26 Academic Year</span></div>
+</div>
+<div class="entry">
+  <div class="line"><span class="head">Qin-Fang Scholarship for Academic Excellence</span><span class="r it">Fall 2025</span></div>
+  <div class="sub">Department of Sociology, Soochow University</div>
+</div>
+
+<h2>Skills and Techniques</h2>
+<div class="entry">
+  <div class="head" style="display:inline">Technical</div> : Python, SQL, LoRA fine-tuning, Docker
+</div>
+<div class="entry">
+  <div class="head" style="display:inline">Languages</div> : Mandarin Chinese (native), English, Korean (TOPIK Level 2)
+</div>
+
+</body>
+</html>
